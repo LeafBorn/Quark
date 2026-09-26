@@ -1,0 +1,17 @@
+# Large Model Weights (exceeds GitHub 100MB limit)
+*.pt
+*.bin
+*.safetensors
+quark.pt
+quark_alpaca.pt
+checkpoints/
+
+# Python Cache & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+.ipynb_checkpoints/

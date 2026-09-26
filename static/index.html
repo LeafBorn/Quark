@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QUARK // SELF-BUILT LLM</title>
+  <link rel="icon" type="image/png" href="/assets/letter-q.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css?v=5" />
+</head>
+<body class="theme-light">
+  <div class="app-wrapper">
+    <!-- Main Card Viewport matching Image 1 -->
+    <main class="quark-card">
+      <!-- Top Header Navigation -->
+      <header class="top-nav">
+        <div class="status-indicator">
+          <div class="status-dot"></div>
+          <div class="status-meta">
+            <span class="status-brand">QUARK</span>
+            <span class="status-state">ONLINE</span>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <button id="themeToggleBtn" class="icon-btn" title="Toggle Light/Dark Theme">
+            <span id="themeIcon">🌙</span>
+          </button>
+          <button id="settingsToggleBtn" class="icon-btn" title="Settings">
+            ⚙️
+          </button>
+        </div>
+      </header>
+
+      <!-- Center Hero Display -->
+      <section id="heroSection" class="hero-section">
+        <!-- 3D Neural Particle Sphere Canvas Container -->
+        <div class="neural-sphere-container">
+          <div class="sphere-aura"></div>
+          <canvas id="neuralCanvas" width="220" height="220"></canvas>
+        </div>
+
+        <h1 class="hero-title">QUARK</h1>
+        <div class="hero-subtitle">YOUR AI COMPANION</div>
+        <div class="hero-pillars">THINK &nbsp;//&nbsp; ASK &nbsp;//&nbsp; BUILD &nbsp;//&nbsp; GROW</div>
+        <div class="hero-dash"></div>
+        <div class="hero-quote">
+          &ldquo;SMALL QUESTIONS<br />BIG POSSIBILITIES&rdquo;
+        </div>
+      </section>
+
+      <!-- Chat Conversation Stream (Hidden on initial state) -->
+      <section id="chatStream" class="chat-stream hidden">
+        <div class="compact-header">
+          <canvas id="miniNeuralCanvas" width="55" height="55"></canvas>
+          <span class="mini-brand">QUARK</span>
+        </div>
+        <div id="messagesList" class="messages-list"></div>
+      </section>
+
+      <!-- Bottom Input Bar matching Image 1 -->
+      <footer class="input-footer">
+        <form id="chatForm" class="input-capsule">
+          <div class="input-prefix">
+            <span class="paperclip-icon">📎</span>
+            <span class="divider">|</span>
+          </div>
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Message Quark..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="sendBtn" class="send-btn" title="Send Message">
+            <svg viewBox="0 0 24 24" class="send-icon">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
+          </button>
+        </form>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Settings Drawer Modal -->
+  <div id="settingsDrawer" class="settings-drawer hidden">
+    <div class="drawer-header">
+      <h3>Quark Settings</h3>
+      <button id="closeDrawerBtn" class="icon-btn">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="setting-group">
+        <label for="tavilyKeyInput">🌐 Tavily Search API Key</label>
+        <input type="password" id="tavilyKeyInput" placeholder="tvly-..." />
+        <small>Enables real-time web search across all sites. Get free key at <a href="https://tavily.com" target="_blank">tavily.com</a>. (Wikipedia is used automatically if empty)</small>
+      </div>
+
+      <div class="setting-group">
+        <label for="tempSlider">🦙 Temperature: <span id="tempValue">0.65</span></label>
+        <input type="range" id="tempSlider" min="0.1" max="1.0" step="0.05" value="0.65" />
+      </div>
+
+      <div class="setting-group">
+        <div class="device-badge" id="deviceBadge">Checking hardware...</div>
+      </div>
+
+      <button id="clearHistoryBtn" class="danger-btn">🗑️ Clear Chat History</button>
+    </div>
+  </div>
+
+  <script src="/static/script.js?v=5"></script>
+</body>
+</html>
