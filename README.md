@@ -196,10 +196,6 @@ $$\text{SwiGLU}(x) = \left( \text{SiLU}(x W_{\text{gate}}) \otimes (x W_{\text{u
 
 ## 📉 Loss Function & Training Objectives
 
-### Autoregressive Next-Token Prediction
-During forward pass, logits are shifted relative to target labels:
-
-$$\text{shift\_logits} = \text{logits}[:, :-1, :], \quad \text{shift\_labels} = \text{labels}[:, 1:]$$
 
 The loss is computed via Cross-Entropy:
 
