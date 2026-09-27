@@ -7,9 +7,13 @@
 [![Frontend](https://img.shields.io/badge/UI-Interactive%203D%20Canvas-lightgrey.svg)](static/)
 
 **QuarkLlama** is a custom 501-million-parameter (0.5B) autoregressive causal language model designed from the ground up and trained using PyTorch. Combined with **Quark AI Companion**, it delivers a full-stack, local web application featuring real-time factual grounding via Tavily AI Search and an interactive 3D particle sphere interface.
+## 📸 Project Preview
 
+![Project Screenshot](static/assets/Sample.png)
 ---
+## 🎥 Project Demo
 
+[▶️ Watch the Project Demo](static/assets/demo.mp4)
 ## 📑 Table of Contents
 1. [Overview & Highlights](#-overview--highlights)
 2. [Model Architecture & Specifications](#-model-architecture--specifications)
